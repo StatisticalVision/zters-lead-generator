@@ -11,8 +11,6 @@ RUN mkdir -p /zters-lead-generator &&\
     apt-get install libpq5 -y
 
 WORKDIR /zters-lead-generator
-COPY R R/
-COPY config config/
 COPY install_packages.r /zters-lead-generator/install_packages.r
 COPY Main-LeadGenerator-PostgresDB.r /zters-lead-generator/Main-LeadGenerator-PostgresDB.r
 
