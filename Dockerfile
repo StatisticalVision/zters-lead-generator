@@ -3,7 +3,7 @@
 # Base image --------------------------------------------------------------
 FROM rocker/r-ver:4.1.1
 
-# copy scripts and or data -----------------------------------------------------
+# copy scripts and or data 2-----------------------------------------------------
 # We next write instructions to create directories as needed in the container and copy the scripts
 # Create a directory called /zters-data-backup and install the libpq5 package required for connecting to PostgreSQL databases.
 RUN mkdir -p /zters-lead-generator &&\
@@ -14,8 +14,8 @@ WORKDIR /zters-lead-generator
 COPY R R/
 COPY config config/
 COPY install_packages.r /zters-lead-generator/install_packages.r
-COPY Main - Lead Generator - Postgres DB.r /zters-lead-generator/Main - Lead Generator - Postgres DB.r
+COPY Main-LeadGenerator-PostgresDB.r /zters-lead-generator/Main-LeadGenerator-PostgresDB.r
 
 # Run the script ---------------------------------------------------------------
 RUN Rscript /zters-lead-generator/install_packages.r
-CMD Rscript /zters-lead-generator/Main - Lead Generator - Postgres DB.r
+CMD Rscript /zters-lead-generator/Main-LeadGenerator-PostgresDB.r
