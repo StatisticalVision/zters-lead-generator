@@ -18,6 +18,7 @@ db_port <- Sys.getenv("PORT")  # Server port
 db_user <- Sys.getenv("USERNAME")
 db_password <- Sys.getenv("PASSWORD")
 
+
 keys = fread("C://Users//saina//Desktop//Prj1//ZTERS_STEP2//api_keys_saina.csv")
 db <- 'postgres' 
 host_db <- "internal-production.postgres.database.azure.com" 
